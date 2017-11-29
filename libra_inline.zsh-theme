@@ -2,13 +2,13 @@
 
 if [[ $EUID -ne 0 ]]; then
   # no root
-PROMPT='$(build_prompt)%{$fg_bold[yellow]%}%~
+PROMPT='$(custom_build_prompt)%{$fg_bold[yellow]%}%~
 %{$fg_no_bold[green]%}• %{$fg_no_bold[yellow]%}• %{$fg_bold[red]%}• '
 RPROMPT='%{$reset_color%} ⌚ %T %{$fg_no_bold[black]%}|%n @ %m|%{$reset_color%}'
 else
   # root
 PROMPT='
-$(build_prompt)%{$fg_bold[yellow]%}%~
+$(custom_build_prompt)%{$fg_bold[yellow]%}%~
 %{$fg_no_bold[green]%}• %{$fg_no_bold[yellow]%}• %{$fg_bold[red]%} # '
 RPROMPT='%{$reset_color%} ⌚ %T %{$fg_no_bold[red]%}|%n @ %m|%{$reset_color%}'
 fi
